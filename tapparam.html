@@ -13,28 +13,27 @@
   <title>Blogen - Social Network</title>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">Blogen</a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav">
-          <li class="nav-item px-2">
-            <a href="index.html" class="nav-link">Dashboard</a>
-          </li>
-          <li class="nav-item px-2">
-            <a href="posts.html" class="nav-link">Posts</a>
-          </li>
-          <li class="nav-item px-2">
-            <a href="categories.html" class="nav-link">Categories</a>
-          </li>
-          <li class="nav-item px-2">
-            <a href="users.html" class="nav-link">Users</a>
-          </li>
-        </ul>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Home</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2">
+          <a href="gestures.html" class="nav-link active">Basic Gestures</a>
+        </li>
+        <li class="nav-item px-2">
+          <a href="findelem.html" class="nav-link">Find Elements</a>
+        </li>
+        <li class="nav-item px-2">
+          <a href="tapparam.html" class="nav-link">Tap Param</a>
+        </li>
+        <li class="nav-item px-2">
+          <a href="inputparam.html" class="nav-link">Input Param</a>
+        </li>
+      </ul>
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown mr-3">
@@ -66,7 +65,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1><i class="fas fa-cog"></i> Settings</h1>
+          <h3><i class="fas fa-cog"></i>     PARAMETERIZATION TESTS</h3>
         </div>
       </div>
     </div>
@@ -100,83 +99,96 @@
         <div class="col">
           <div class="card">
             <div class="card-header">
-              <h4>Edit Settings</h4>
+              <h4>TAP PARAMETERIZATION</h4>
             </div>
             <div class="card-body">
               <form>
-                <fieldset class="form-group">
-                  <legend>Allow User Registration</legend>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="Yes" checked> Yes
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="No"> No
-                    </label>
-                  </div>
+                
                   
                 </fieldset>
                 <fieldset class="form-group">
-                  <legend>Homepage Format</legend>
+                  <legend>Radio Button One</legend>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="posts" checked> Blog Page
+                      <input type="radio" class="form-check-input" value="posts" checked> Yes
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="page"> Home Page
+                      <input type="radio" class="form-check-input" value="page"> No
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="No"> Mobile Version
+                      <input type="radio" class="form-check-input" value="No"> Maybe
                     </label>
                   </div>
                 </fieldset>
                 <fieldset class="form-group">
-                  <legend>Notifications</legend>
+                  <legend>How much do you like this test?</legend>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="posts" checked>Email and Text
+                      <input type="radio" class="form-check-input" value="posts" checked>A lot
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="page">Email only
+                      <input type="radio" class="form-check-input" value="page">A fair amount
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="No"> None
+                      <input type="radio" class="form-check-input" value="No">A little bit
                     </label>
                   </div>
                  <p></p>
+                 
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Option Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">First Option</a>
+                      <a class="dropdown-item" href="#">Second Option</a>
+                      <a class="dropdown-item" href="#">Third Option</a>
+                    </div>
+                  </div>
+                  <p></p>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Choice Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">First Choice</a>
+                      <a class="dropdown-item" href="#">Second Choice</a>
+                      <a class="dropdown-item" href="#">Third Choice</a>
+                    </div>
+                  </div>
+                  <p></p>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Selection Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">First Selection</a>
+                      <a class="dropdown-item" href="#">Second Selection</a>
+                      <a class="dropdown-item" href="#">Third Selection</a>
+                    </div>
+                  </div>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                   <br>
+                    <label class="custom-control-label" for="customSwitches">Toggle Switch</label>
+                  </div>
+                  <br>
+                  <div class="switch">
+                    <label>
+                      Off
+                      <input type="checkbox">
+                      <span class="lever"></span> On
+                    </label>
+                  </div>
                   
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item dropdown mr-3">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                          <i class="fas fa-user"></i> Dropdown Option One
-                        </a>
-                        <div class="dropdown-menu">
-                          <a href="profile.html" class="dropdown-item"> 
-                            <i class="fas fa-user-circle"></i> Select A
-                          </a>
-                          <a href="settings.html" class="dropdown-item">
-                            <i class="fas fa-cog"></i> Select B
-                          </a>
-                          <a href="settings.html" class="dropdown-item">
-                            <i class="fas fa-cog"></i> Select C
-                          </a>
-                          <a href="settings.html" class="dropdown-item">
-                            <i class="fas fa-cog"></i> Select D
-                          </a>
-                        </div>
-                      </li>
-                     
-                    </ul>
 
                   </div>
                     </label>
