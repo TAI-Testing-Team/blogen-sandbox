@@ -89,7 +89,7 @@
   </section>
 
 
-  <!-- SETTINGS -->
+  <!-- MULTIPLE TAPS FORM -->
 
   <section id="settings">
     <div class="container">
@@ -106,17 +106,17 @@
                   <legend>Radio Button One</legend>
                   <div class="form-check">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="posts" checked> Yes
+                    <input type="radio" class="form-check-input" name="radio" value="posts" checked> Yes
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="page"> No
+                    <input type="radio" class="form-check-input" name="radio" value="page"> No
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="No"> Maybe
+                    <input type="radio" class="form-check-input" name="radio" value="No"> Maybe
                     </label>
                   </div>
                 </fieldset>
@@ -125,59 +125,49 @@
                   <legend>How much do you like this test?</legend>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="posts" checked>A lot
+                      <input type="radio" class="form-check-input" name="options" value="posts" checked>A lot
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="page">A fair amount
+                      <input type="radio" class="form-check-input" name="options" value="page">A fair amount
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="No">A little bit
+                      <input type="radio" class="form-check-input" name="options" value="No">A little bit
                     </label>
                   </div>
                 </fieldset>
-<!-- First Dropdown -->
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<!-- Three Button Group -->
+              <div class="form-group">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toobar with button groups">
+                  <div class="btn-group me-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary">Button 1</button>
+                    <button type="button" class="btn btn-primary">Button 2</button>
+                    <button type="button" class="btn btn-primary">Button 3</button>
+                  </div>
+                  <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <button id="btnGroupDrop1 dropdownMenuButton" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                       Option Dropdown
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">First Option</a>
-                      <a class="dropdown-item" href="#">Second Option</a>
-                      <a class="dropdown-item" href="#">Third Option</a>
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#">First Option</a></li>
+                      <li><a class="dropdown-item" href="#">Second Option</a></li>
+                    </ul>
                   </div>
-                </div>
-<!-- Second Dropdown -->
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="btn-group me-2" role="group" aria-label="Third group">
+                    <button id="btnGroupDrop1 dropdownMenuButton" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                       Choice Dropdown
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">First Choice</a>
-                      <a class="dropdown-item" href="#">Second Choice</a>
-                      <a class="dropdown-item" href="#">Third Choice</a>
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#">First Choice</a></li>
+                      <li><a class="dropdown-item" href="#">Second Choice</a></li>
+                      <li><a class="dropdown-item" href="#">Third Choice</a></li>
+                    </ul>
                   </div>
                 </div>
-<!-- Third Dropdown -->
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Selection Dropdown
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">First Selection</a>
-                      <a class="dropdown-item" href="#">Second Selection</a>
-                      <a class="dropdown-item" href="#">Third Selection</a>
-                    </div>
-                  </div>
-                </div>
+              </div>
 <!-- Toggle Switch -->
                 <div class="form-group">
                     <div class="custom-control custom-switch">
