@@ -85,8 +85,34 @@
     </div>
   </section>
 
+  <!-- WAIT FOR TEMPLATE MATCH-->
 
-  <!-- SETTINGS -->
+  <section id="settings">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col">
+          <div class="card">           
+            <div class="card-header">
+              <h4>WAIT FOR TEMPLATE MATCH</h4>
+            </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">              
+                    <button type="button" class="btn btn-light" id="match">Template Matched Button</button>
+                    <p></p>
+                    <div id="tmpmatch"></div>  
+                    <label></label>    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+  </section>
+
+
+  <!-- WAIT FOR JOB TO COMPLETE-->
 
   <section id="settings">
     <div class="container">
@@ -111,6 +137,8 @@
         </div>
       </div>
   </section>
+
+   
 
   <!-- FOOTER -->
 
@@ -160,7 +188,13 @@
     // CK TEXT EDITOR (WYSIWYG)
     CKEDITOR.replace('editor1');
 
-    // CLICK FUNCTION WITH DELAY
+    //SHOW SUCCESS ALERT FOR 'WAIT FOR TEMPLATE MATCH'
+    $('#match').click(function (e) {
+    e.preventDefault()
+    $('#tmpmatch').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Template Match Successful</div>');
+  })
+
+    // CLICK DELAY FUNCTION FOR SLOW MODAL
 
     $('[data-toggle=modal]').on('click', function (e) {
     var $target = $($(this).data('target'));
