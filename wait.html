@@ -94,13 +94,16 @@
         <div class="col">
           <div class="card">           
             <div class="card-header">
-              <h4>WAIT FOR ACTION TO COMPLETE</h4>
+              <h4>WAIT FOR JOB TO COMPLETE</h4>
             </div>
               <div class="card-body">
-                <div class="col-md-3">
-                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                    Open Slow Modal 
-                  </button>
+                <div class="row">
+                  <div class="col-md-8">              
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                      Open Very Slow Modal 
+                    </button>
+                    <label></label>    
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +114,7 @@
 
   <!-- FOOTER -->
 
-  <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5 fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -136,10 +139,10 @@
         </button>
       </div>
       <div class="modal-body">
-        Sorry I'm Late. Please Close Me.
+        Sorry I'm Late. Thanks for waiting a MINUTE. Now you can close me!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">COMPLETE JOB</button>
       </div>
     </div>
   </div>
@@ -167,7 +170,7 @@
             $target.modal('show')
                 .data('triggered',false); // prevents multiple clicks from reopening
         };
-    }, 10000); // milliseconds
+    }, 60000); // milliseconds
     return false;
 });
 

@@ -80,24 +80,6 @@
   <!-- ACTIONS -->
 
 
-<!-- 
-  <section id="actions" class="py-4 mb-4 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <a href="index.html" class="btn btn-light btn-block">
-            <i class="fas fa-arrow-left"></i> Back to Dashboard
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="index.html" class="btn btn-success btn-block">
-            <i class="fas fa-check"></i> Save Changes
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <section id="search" class="py-4 mb-4 bg-light">
     <div class="container">
       <div class="row">
@@ -106,7 +88,6 @@
   </section>
 
 
- 
 
   <section id="settings">
     <div class="container">
@@ -116,172 +97,35 @@
             <div class="card-header">
               <h4>VERIFICATION</h4>
             </div>
-            <div class="card-body">
-<p></p>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" class="ml-3" data-toggle="modal" data-target="#onestring">
-  Verify One String
-</button>
+              <div class="card-body">
+                <div class="row-inline mx-3">
+                  <!-- VERIFY ONE STRING Button -->
+                  <button type="button" class="btn btn-primary" class="mt-2" data-toggle="modal" data-target="#onestring">
+                    Verify One String
+                  </button>
+                  <!-- VERIFY TWO STRINGS Button -->
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#twostrings">
+                    Verify Two Strings
+                  </button>
+                  <!-- VERIFY ONE LABEL Button -->
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#label">
+                    Verify One Label
+                  </button>
+                  <!-- VERIFY TWO LABELS Button -->
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#twolabels">
+                    Verify Two Labels
+                  </button>
+                  <!-- VERIFY LABEL NOT PRESENT Button -->
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong">
+                    Verify Label Not Present
+                  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="onestring" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Accept our Terms and Conditions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        We need you to verify this string.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Accept</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#twostrings">
-  Verify Two Strings
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="twostrings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Accept our Terms and Conditions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        We need you to verify this string. We need you to verify this string twice. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Accept</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#label">
-  Verify Label
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="label" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Accept our Terms and Conditions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      We need you to verify "accept" label.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Accept</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#twolabels">
-  Verify Two Labels
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="twolabels" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Accept our Terms and Conditions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        We need you to verify that two "Accept Labels" are on the screen.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
-        <button type="button" class="btn btn-primary">Accept</button>
-      </div>      E44ESDDSS
-    </div>
-  </div>
-</div>
-              <!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong">
-  Verify Label Not Present
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Accept our terms and conditions.</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      We need you to make sure there is not the label "my_label" in this pop up. <p></p> ipsum dolor sit amet consectetur, adipisicing elit. Tenetur dolor soluta quo animi aut voluptates, saepe cupiditate recusandae deserunt placeat alias laboriosam, eum aperiam, exercitationem et sunt fugiat voluptatibus pariatur! lorem
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita labore minima dignissimos quia molestias iure ipsam, alias obcaecati nesciunt, rerum sit praesentium, assumenda ab blanditiis molestiae saepe nulla cupiditate dicta.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo blanditiis fuga aspernatur quas ex culpa ut sed omnis consequatur consequuntur neque, voluptates maxime quod temporibus incidunt veritatis sapiente odio!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusantium mollitia maxime quo consectetur! Sunt, architecto doloremque laborum nam fugiat aspernatur est alias omnis soluta itaque ex voluptas dicta laudantium. 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptate facere natus voluptatem incidunt omnis iure itaque tenetur? Fugiat, accusamus ab. Suscipit pariatur fugiat facilis, illo ut corrupti possimus sequi? 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. At quae corporis quos, veniam omnis eius id fugit. Laborum pariatur perspiciatis sed corrupti ducimus. Est culpa praesentium ratione vitae neque natus!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus, adipisci perferendis non enim impedit possimus mollitia iusto, expedita autem consectetur cumque nostrum odio reiciendis hic dolorum iure dignissimos. Odit?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#nostring">
-                Verify String Not Present
-              </button>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="nostring" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Accept our terms and conditions.</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                    We need you to make sure there is not a specific string inside this text. <p></p> ipsum dolor sit amet consectetur, adipisicing elit. Tenetur dolor soluta quo animi aut voluptates, saepe cupiditate recusandae deserunt placeat alias laboriosam, eum aperiam, exercitationem et sunt fugiat voluptatibus pariatur! lorem
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita labore minima dignissimos quia molestias iure ipsam, alias obcaecati nesciunt, rerum sit praesentium, assumenda ab blanditiis molestiae saepe nulla cupiditate dicta.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo blanditiis fuga aspernatur quas ex culpa ut sed omnis consequatur consequuntur neque, voluptates maxime quod temporibus incidunt veritatis sapiente odio!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusantium mollitia maxime quo consectetur! Sunt, architecto doloremque laborum nam fugiat aspernatur est alias omnis soluta itaque ex voluptas dicta laudantium. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptate facere natus voluptatem incidunt omnis iure itaque tenetur? Fugiat, accusamus ab. Suscipit pariatur fugiat facilis, illo ut corrupti possimus sequi? 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At quae corporis quos, veniam omnis eius id fugit. Laborum pariatur perspiciatis sed corrupti ducimus. Est culpa praesentium ratione vitae neque natus!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus, adipisci perferendis non enim impedit possimus mollitia iusto, expedita autem consectetur cumque nostrum odio reiciendis hic dolorum iure dignissimos. Odit?
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
+                  <!-- Verify STRING NOT PRESENT Button -->
+                  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#nostring">
+                    Verify String Not Present
+                  </button>
                 </div>
               </div>
-
-             <!-- End of modal section -->
             </div>
           </div>
         </div>  
@@ -291,7 +135,7 @@
 
   <!-- FOOTER -->
 
-  <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5 fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -303,6 +147,138 @@
       </div>
     </div>
   </footer>
+
+  <!-- VERIFY ONE STRING Modal -->
+  <div class="modal fade" id="onestring" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Verify a String</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Please Verify My Existence
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- VERIFY TWO STRINGS MODAL -->
+  <div class="modal fade" id="twostrings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Verify Two Strings</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          There's No Place Like Home. There's No Place Like Home.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- VERIFY ONE LABEL Modal -->
+<div class="modal fade" id="label" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Verify a Label</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please Accept that the Accept Button is Labeled by Selecting Accept.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VERIFY TWO LABELS Modal -->
+<div class="modal fade" id="twolabels" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Verify Two Labels</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Verify that Accept Button and OK Button Appear on the Screen
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
+        <button type="button" class="btn btn-info">OK</button>
+        <button type="button" class="btn btn-primary">Accept</button>
+      </div>       
+    </div>
+  </div>
+</div>
+
+<!-- VERIFY LABEL NOT PRESENT Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Verify Label Not Present</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please Verify btn_accept Does Not Exist
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- VERIFY STRING NOT PRESENT Modal -->
+
+<div class="modal fade" id="nostring" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Verify String Not Present</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body">
+          Verify the String "first-born child" is NOT Present in the Terms and Conditions: 
+          <br>
+          <br> 
+          These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and [business entity name] (“we,” “us” or “our”), concerning your access to and use of the [website name.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+
+          You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.
+          
+          Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason.      
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
