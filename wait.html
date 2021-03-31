@@ -70,33 +70,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2><i class="far fa-clock"></i>   Wait</h2>
-          
+          <h2><i class="far fa-clock"></i> Wait</h2>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ACTIONS -->
-
-
-<!-- 
-  <section id="actions" class="py-4 mb-4 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <a href="index.html" class="btn btn-light btn-block">
-            <i class="fas fa-arrow-left"></i> Back to Dashboard
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="index.html" class="btn btn-success btn-block">
-            <i class="fas fa-check"></i> Save Changes
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  <!-- WHITE SPACE -->
 
   <section id="search" class="py-4 mb-4 bg-light">
     <div class="container">
@@ -114,33 +94,27 @@
         <div class="col">
           <div class="card">           
             <div class="card-header">
-              <h4>Waiting...</h4>
+              <h4>WAIT FOR JOB TO COMPLETE</h4>
             </div>
-            <div class="card-body">
-            <p></p>
-              <div class="col-md-3">
-                <a href="index.html" class="btn btn-success btn-block">
-                  <i class="far fa-clock"></i> Wait button coming soon
-                </a>
-                <p>
-                
-
-                </p>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">              
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                      Open Very Slow Modal 
+                    </button>
+                    <label></label>    
+                  </div>
+                </div>
               </div>
-             
-                <p></p>
-              </div>
-             
             </div>
-          </div>
-        </div>  
+          </div>  
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- FOOTER -->
 
-  <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5 fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -153,6 +127,26 @@
     </div>
   </footer>
 
+  <!-- WAIT FOR ELEMENT MODAL -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Slow Modal says:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Sorry I'm Late. Thanks for waiting a MINUTE. Now you can close me!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">COMPLETE JOB</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -165,6 +159,21 @@
 
     // CK TEXT EDITOR (WYSIWYG)
     CKEDITOR.replace('editor1');
+
+    // CLICK FUNCTION WITH DELAY
+
+    $('[data-toggle=modal]').on('click', function (e) {
+    var $target = $($(this).data('target'));
+    $target.data('triggered',true);
+    setTimeout(function() {
+        if ($target.data('triggered')) {
+            $target.modal('show')
+                .data('triggered',false); // prevents multiple clicks from reopening
+        };
+    }, 60000); // milliseconds
+    return false;
+});
+
   </script>
 </body>
 
