@@ -134,14 +134,15 @@
                     </label>
                   </div>
                 </fieldset>
-<!-- Three Button Group -->
+<!-- One Button Group -->
               <div class="form-group">
                 <div class="btn-toolbar" role="toolbar" aria-label="Toobar with button groups">
                   <div class="btn-group mr-3" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary">Button 1</button>
-                    <button type="button" class="btn btn-primary">Button 2</button>
-                    <button type="button" class="btn btn-primary">Button 3</button>
+                    <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" data-content="Button Clicked.">
+                      Button One
+                    </button>
                   </div>
+<!-- Option Dropdown -->
                   <div class="btn-group me-2 mr-3" role="group" aria-label="Second group">
                     <button id="btnGroupDrop1 dropdownMenuButton" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                       Option Dropdown
@@ -209,6 +210,10 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    $(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
     // CK TEXT EDITOR (WYSIWYG)
     CKEDITOR.replace('editor1');
