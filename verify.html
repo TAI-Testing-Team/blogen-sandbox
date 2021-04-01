@@ -97,32 +97,50 @@
             <div class="card-header">
               <h4>VERIFICATION</h4>
             </div>
-              <div class="card-body">
-                <div class="row-inline mx-3">
-                  <!-- VERIFY ONE STRING Button -->
-                  <button type="button" class="btn btn-primary" class="mt-2" data-toggle="modal" data-target="#onestring">
-                    Verify One String
+            <div class="card-body">
+              <div class="row">
+                <div class="col text-center">
+                <!-- VERIFY ONE STRING Button -->
+                  <button type="button" class="btn btn-primary btn-lg" class="mt-2" data-toggle="modal" data-target="#onestring">
+                    One String
                   </button>
-                  <!-- VERIFY TWO STRINGS Button -->
-                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#twostrings">
-                    Verify Two Strings
+                </div>
+                <div class="col text-center">
+                <!-- VERIFY TWO STRINGS Button -->
+                  <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#twostrings">
+                    Two Strings
                   </button>
-                  <!-- VERIFY ONE LABEL Button -->
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#label">
-                    Verify One Label
+                </div>
+                <div class="col text-center">
+                <!-- VERIFY ONE LABEL Button -->
+                  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#label">
+                    One Label
                   </button>
-                  <!-- VERIFY TWO LABELS Button -->
-                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#twolabels">
-                    Verify Two Labels
+                </div>                  
+                <div class="col text-center">
+                <!-- VERIFY TWO LABELS Button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#twolabels">
+                    Two Labels
                   </button>
-                  <!-- VERIFY LABEL NOT PRESENT Button -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong">
-                    Verify Label Not Present
+                </div>
+              </div>
+              <div class="row mt-5 mx-6">
+                <div class="col text-center">
+                <!-- VERIFY TWO LABELED ELEMENTS Button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#twolabeledelements">
+                    Two Labeled Elements
                   </button>
-
-                  <!-- Verify STRING NOT PRESENT Button -->
-                  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#nostring">
+                </div>                   
+                <div class="col text-center">
+                <!-- Verify STRING NOT PRESENT Button -->
+                  <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#nostring">
                     Verify String Not Present
+                  </button>
+                </div>
+                <div class="col text-center">
+                <!-- VERIFY LABEL NOT PRESENT Button -->
+                  <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModalLong">
+                    Verify Label Not Present
                   </button>
                 </div>
               </div>
@@ -220,7 +238,28 @@
         </button>
       </div>
       <div class="modal-body">
-        Verify that Accept Button and OK Button Appear on the Screen
+        Verify that Accept Button is Labeled as: [btn_accept & btn_modal_button]
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept</button>
+      </div>       
+    </div>
+  </div>
+</div>
+
+
+<!-- VERIFY TWO LABELED ELEMENTS Modal -->
+<div class="modal fade" id="twolabeledelements" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Verify Two Labeled Elements</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Verify that the Accept Button and the OK Button appear on the Screen
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Verified</button>
@@ -263,7 +302,7 @@
         </button>
       </div>
         <div class="modal-body">
-          Verify the String "first-born child" is NOT Present in the Terms and Conditions: 
+          Verify there is no Google email address in the Terms and Conditions: 
           <br>
           <br> 
           These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and [business entity name] (“we,” “us” or “our”), concerning your access to and use of the [website name.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).

@@ -99,7 +99,7 @@
               <h4>BASIC GESTURES TESTS</h4>
             </div>
             <div class="card-body">
-              <form method="post">
+              <form>
                 <div class="form-group">
                   <button type="button" class="btn btn-lg btn-success" id="tap">Tap</button>
                   <p></p>
@@ -175,13 +175,13 @@
     // Show Success Alert On Click of Button
     $('#tap').click(function (e) {
       e.preventDefault()
-      $('#messagetap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Tap Successful</div>');
+      $('#messagetap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Tap Successful</div>');
     })
 
     // Show Success Alert on Double Click of Button
     $('#dbltap').dblclick(function (e) {
       e.preventDefault()
-      $('#messagedbltap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Double Tap Successful</div>');
+      $('#messagedbltap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Double Tap Successful</div>');
     })
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
