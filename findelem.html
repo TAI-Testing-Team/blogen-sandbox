@@ -100,13 +100,13 @@
               <h4>FIND ELEMENT</h4>
               </div>
             <div class="card-body">
-              <form class="">
+              <form>
                 <div class="form-group mb-5 p-3">
                   <label for="exampleFormControlTextarea1">ELEMENT INFO</label>
-                  <textarea class="form-control" id="eleminfoarea" rows="5" type="reset" value="Reset" onclick="clearText()"></textarea>
+                  <textarea type="text" class="form-control" value id="eleminfoarea" value="" rows="5" onclick="clearText()"></textarea>
                 </div>
               </form>
-              <div class="container py-3 my-3">
+              <form>
                 <div class="row justify-content-around" for="smallelementscontainer">
                   <button type="button" class="btn btn-primary btn-lg">Button</button>
                   <div class="custom-control custom-checkbox pt-3">
@@ -123,10 +123,20 @@
                   <!-- <button type="button" class="btn btn-primary btn-lg">Button</button> -->
                 </div>
               </div>
-              <div class="container my-5 py-5">
-                <label for="customRange1">SLIDER</label>
-                <input type="range" class="custom-range" id="customRange1">
-              </div>  
+              </form>
+              <div class="container py-3 my-3">
+                <div class="container pb-5">
+                  <label for="customRange1">Slider</label>
+                  <input type="range" class="custom-range" id="customRange1">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Text Area</label>
+                  <textarea class="form-control overflow-auto scrollable" id="exampleFormControlTextarea1" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Input Field</label>
+                  <input id="thevalue"class="form-control" value="" type="text" placeholder="Default input" onchange="getInputValue()">
+                </div>  
             </div>
           </div>
         </div>
@@ -136,7 +146,7 @@
 
   <!-- FOOTER -->
 
-  <!-- <footer id="main-footer" class="bg-dark text-white mt-5 p-5 fixed-bottom">
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5 sticky-bottom">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -147,7 +157,7 @@
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
 
 
@@ -169,10 +179,13 @@
 
     // Reset text field onClick
     function clearText()  
-{
-    document.getElementById('eleminfoarea').value = "";
-    document.getElementById('textfield2').value = "";
-}  
+
+
+    function getInputValue(){
+    var inputVal = document.getElementById("thevalue").value;
+
+}
+
 
   </script>
 </body>
