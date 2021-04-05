@@ -103,29 +103,29 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <input type="email" class="form-control" value="" id="inputEmail4" placeholder="Email">                      
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Password</label>
-                      <input type="text" class="form-control" id="inputPassword4" placeholder="Password">
+                      <input type="text" class="form-control" value="" id="inputPassword4" placeholder="Password">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="inputAddress">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">  
+                      <input type="text" class="form-control" value="" id="inputAddress" placeholder="1234 Main St">  
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="inputAddress2">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      <input type="text" class="form-control" value="" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputCity">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <input type="text" class="form-control" value="" id="inputCity">
                     </div>
                     <div class="form-group col-md-4">
                       <label for="inputState">State</label>
@@ -139,7 +139,7 @@
                     </div>
                     <div class="form-group col-md-2">
                       <label for="inputZip">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" value="" id="inputZip">
                     </div>
                     <div class="form-group mx-2 my-2">
                       <div class="form-check">
@@ -317,7 +317,62 @@
     CKEDITOR.replace('editor1');
 
     //Create alert for button//
+
+    const emailinput = document.getElementById('inputEmail4');
     
+    emailinput.addEventListener('input', updateEmail);
+
+    function updateEmail(e) {
+
+      emailinput.setAttribute('value', e.target.value)
+    }
+
+    const password = document.getElementById('inputPassword4');
+    
+    password.addEventListener('input', updatePassword);
+
+    function updatePassword(e) {
+
+      password.setAttribute('value', e.target.value)
+    }
+
+    const address = document.getElementById('inputAddress');
+    
+    address.addEventListener('input', updateAddress);
+
+    function updateAddress (e) {
+
+      address.setAttribute('value', e.target.value)
+    }
+
+    const address2 = document.getElementById('inputAddress2');
+    
+    address2.addEventListener('input', updateAddress2);
+
+    function updateAddress2(e) {
+
+      address2.setAttribute('value', e.target.value)
+    }
+
+    const city = document.getElementById('inputCity');
+    
+    city.addEventListener('input', updateCity);
+
+    function updateCity(e) {
+
+      city.setAttribute('value', e.target.value)
+    }
+    const zip = document.getElementById('inputZip');
+    
+    zip.addEventListener('input', updateZip);
+
+    function updateZip(e) {
+
+      zip.setAttribute('value', e.target.value)
+    }
+
+
+
 function myFunction() {
   alert("Submitted!");
 }
