@@ -148,23 +148,24 @@
             <div class="card-header">
               <h4>WAIT FOR JOB TO COMPLETE</h4>
             </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-8">              
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                      Open Very Slow Modal 
-                    </button>
-                    <label></label>    
-                  </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col mt-2">              
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                    Open Very Slow Modal 
+                  </button>
                 </div>
-              </div>
+                <div class="col-md-8 mt-1">
+                  <div id="waitforjob"></div>
+                </div>
+              </div>    
             </div>
-          </div>  
-        </div>
+          </div>
+        </div>  
       </div>
+    </div>
   </section>
 
-   
 
   <!-- FOOTER -->
 
@@ -196,7 +197,7 @@
         Sorry I'm Late. Thanks for waiting on me. Now you can close me!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">COMPLETE JOB</button>
+        <button type="button" id="completejob-btn"class="btn btn-secondary" data-dismiss="modal">COMPLETE JOB</button>
       </div>
     </div>
   </div>
@@ -220,9 +221,16 @@
     $('#tmpmatch').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Template Match Successful</div>');
   })
 
-  $('#label').click(function (e) {
+      //SHOW SUCCESS ALERT FOR 'WAIT FOR LABEL'
+    $('#label').click(function (e) {
+      e.preventDefault()
+      $('#waitlabel').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Label Successful</div>');
+  })
+
+      //SHOW SUCCESS ALERT FOR 'WAIT FOR JOB TO COMPLETE'
+      $('#completejob-btn').click(function (e) {
     e.preventDefault()
-    $('#waitlabel').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Label Successful</div>');
+    $('#waitforjob').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Job to Complete Successful</div>');
   })
 
 
