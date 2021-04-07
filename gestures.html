@@ -113,13 +113,13 @@
                 <div class="form-row form-group">
                   <div class="col-md-8 mb-3">
                     <label for="formGroupExampleInput">Text Entry - No Submit</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Text Here">
+                    <input type="text" class="form-control" id="input-nosubmit" placeholder="Enter Text Here">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="validationCustom01">Text Entry</label>
                   <div class="form-inline">
-                    <input type="text" class="form-control col-md-8" id="validationCustom01" placeholder="Enter Text Here" value="" required>
+                    <input type="text" class="form-control col-md-8" id="input-submit" placeholder="Enter Text Here" value="">
                     <button class="btn btn-md btn-primary ml-3">Submit</button>
                       <div class="valid-feedback">
                       Looks good!
@@ -173,6 +173,7 @@
     $('#year').text(new Date().getFullYear());
 
     // Show Success Alert On Click of Button
+
     $('#tap').click(function (e) {
       e.preventDefault()
       $('#messagetap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Tap Successful</div>');
@@ -183,6 +184,27 @@
       e.preventDefault()
       $('#messagedbltap').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Double Tap Successful</div>');
     })
+
+      // Capture Value of First Input Field upon Input of Text
+
+      const inputfield1 = document.getElementById('input-nosubmit');
+
+      inputfield1.addEventListener('input', updateValue1);
+
+      function updateValue1 (e) {
+          inputfield1.setAttribute('value', e.target.value)  
+      }
+
+      // Capture Value of First Input Field upon Input of Text
+
+      const inputfield2 = document.getElementById('input-submit');
+
+      inputfield2.addEventListener('input', updateValue2);
+
+      function updateValue2 (e) {
+        inputfield2.setAttribute('value', e.target.value)  
+}
+
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {
