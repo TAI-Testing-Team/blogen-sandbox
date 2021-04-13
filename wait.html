@@ -98,7 +98,7 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col mt-2">              
-                    <button type="button" class="btn btn-primary" id="label">Wait for Label</button>  
+                    <button type="button" class="btn btn-primary" id="waitmodal" data-toggle="modal" data-target="#labelModal">Wait for Label</button>  
                   </div>
                   <div class="col-md-8 mt-1">
                     <div id="waitlabel"></div> 
@@ -151,7 +151,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-2">              
-                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-info" id="slowmodal" data-toggle="modal" data-target="#exampleModal">
                     Open Very Slow Modal 
                   </button>
                 </div>
@@ -182,7 +182,28 @@
     </div>
   </footer> -->
 
-  <!-- WAIT FOR ELEMENT MODAL -->
+  <!-- WAIT FOR LABEL MODAL -->
+
+  <div class="modal fade" id="labelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Wait for Label</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button type="button" class="btn btn-info">My Labeled Element</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="labelfound-btn"class="btn btn-secondary" data-dismiss="modal">Label Found</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAIT FOR JOB TO COMPLETE MODAL -->
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -215,16 +236,16 @@
     // CK TEXT EDITOR (WYSIWYG)
     CKEDITOR.replace('editor1');
 
+      //SHOW SUCCESS ALERT FOR 'WAIT FOR LABEL'
+      $('#labelfound-btn').click(function (e) {
+      e.preventDefault()
+      $('#waitlabel').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Label Successful</div>');
+  })
+
     //SHOW SUCCESS ALERT FOR 'WAIT FOR TEMPLATE MATCH'
     $('#match').click(function (e) {
     e.preventDefault()
     $('#tmpmatch').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Template Match Successful</div>');
-  })
-
-      //SHOW SUCCESS ALERT FOR 'WAIT FOR LABEL'
-    $('#label').click(function (e) {
-      e.preventDefault()
-      $('#waitlabel').html('<div class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true"></button>Wait For Label Successful</div>');
   })
 
       //SHOW SUCCESS ALERT FOR 'WAIT FOR JOB TO COMPLETE'
@@ -236,7 +257,21 @@
 
     // CLICK DELAY FUNCTION FOR SLOW MODAL
 
-    $('[data-toggle=modal]').on('click', function (e) {
+    $('#waitmodal').on('click', function (e) {
+    var $target = $($(this).data('target'));
+    $target.data('triggered',true);
+    setTimeout(function() {
+        if ($target.data('triggered')) {
+            $target.modal('show')
+                .data('triggered',false); // prevents multiple clicks from reopening
+        };
+    }, 10000); // milliseconds
+    return false;
+});  
+
+    // CLICK DELAY FUNCTION FOR SLOW MODAL
+
+    $('#slowmodal').on('click', function (e) {
     var $target = $($(this).data('target'));
     $target.data('triggered',true);
     setTimeout(function() {
