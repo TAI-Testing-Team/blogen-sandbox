@@ -199,10 +199,16 @@
     }
 
     // Delete Element Info in TextArea when No Longer Focused
+    
+    textarea.addEventListener('blur', deleteTAattr);
 
-    textarea.addEventListener('focusout', (e) => {
-      e.target.value = '';
-    })
+    function deleteTAattr (e) {
+      textarea.setAttribute('value', e.target.value = '')
+    }
+
+    // textarea.addEventListener('blur', (e) => {
+    //   e.target.value = '';
+    // })
 
 
 
