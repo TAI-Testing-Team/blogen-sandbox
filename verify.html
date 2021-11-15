@@ -89,7 +89,7 @@
 
 
 
-  <section id="settings">
+  <section id="verification">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -124,7 +124,7 @@
                   </button>
                 </div>
               </div>
-              <div class="row mt-5 mx-6">
+              <div class="row mt-4 mx-6">
                 <div class="col text-center">
                 <!-- VERIFY TWO LABELED ELEMENTS Button -->
                   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#twolabeledelements">
@@ -151,7 +151,9 @@
     </div>
   </section>
 
-  <section class="my-5" id="posts">
+<!-- CASE SENSITIVITY TESTING SECTION  -->
+
+  <section class="mt-3" id="case-tests">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -162,14 +164,13 @@
             <div class="card-body">
             <div class="container">
               <div class="row">
-                <div class="col">
-                  <h3 class="text-center">This is the String.</h3>
+                <div class="col mb-1">
+                    <h4 class="border border-primary py-3 text-center">Regular String - CamelCase String - ALL CAPS STRING - lowercase string - Test's String</h4>
                 </div>
-
               </div>
               <div class="row">
                 <div class="col-md-3">
-                  <button type="button" class="btn btn-lg btn-primary btn-block" id="current">Current Case</button>                  
+                  <button type="button" class="btn btn-lg btn-primary btn-block" id="current">Exact Case</button>                  
                 </div>
                 <div class="col-md-3 pt-2">
                   <span id="messagecurrent"></span>                 
@@ -230,42 +231,75 @@
                         <div class="col-md-3  pt-2">
                           <span id="messagepunctuation"></span>                    
                         </div>
-                        </div>
-
-              </div>
-            </div>
-
-
-
-
-            <!-- ORIGINAL TRY -->
-            <!-- <div class="card-body">
-              <form>
-                  <div class="form-row">
-                    <div class="form-col-md-6">
-                      <button type="button" class="btn btn-lg btn-primary" id="camel">CamelCase</button>
-                    <div class="form-group col-md-6" id="messagecamel">Here's some text</div> 
-                    </div>
-                  </div>  
-                
-
-                <div class="form-group">
-                  <button type="button" class="btn btn-lg btn-danger" id="caps">AllCaps</button>
-                  <p></p>
-                  <div id="messagecaps"></div>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-lg btn-warning" id="lowercase">AllLowerCase</button>
-                    <p></p>
-                    <div id="messagelowercase"></div>
-                    </div>
-                    <div class="form-group">
-                      <button type="button" class="btn btn-lg btn-info" id="punctuation">Punctuation</button>
-                      <p></p>
-                      <div id="messagepunctuation"></div>
                       </div>
-                </div> -->
-              </form>
+                    </div>
+                  </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- PUNCTUATION TESTING  -->
+
+  <section class="mt-3" id="case-tests">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>PUNCTUATION TESTING</h4>
+            </div>
+            <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col mb-1">
+                    <h4 class="border border-primary py-3 text-center">underscore_string - dash-string - numb3r str1ng - ch@racter $tring - a_m1xed-$tring</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <button type="button" class="btn btn-md btn-primary btn-block" id="underscore">Underscore</button>                  
+                </div>
+                <div class="col-md-8 pt-2">
+                  <span id="messageunderscore"></span>                 
+                </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-md btn-danger btn-block" id="dash">Dash</button>                  
+                  </div>
+                  <div class="col-md-8 pt-2">
+                    <span id="messagedash"></span>                    
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-md btn-success btn-block" id="numbers">Numbers</button>                  
+                    </div>
+                    <div class="col-md-8 pt-2">
+                      <span id="messagenumbers"></span>                 
+                    </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-4">
+                        <button type="button" class="btn btn-md btn-info btn-block" id="characters">Special Characters</button>                  
+                      </div>
+                      <div class="col-md-8 pt-2">
+                        <span id="messagecharacters"></span>                    
+                      </div>
+                      </div>
+                      <div class="row my-2">
+                        <div class="col-md-4">
+                          <button type="button" class="btn btn-md btn-warning btn-block" id="mixed">Mixed String</button>                  
+                        </div>
+                        <div class="col-md-8 pt-2">
+                          <span id="messagemixed"></span>                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>    
             </div>
           </div>
         </div>
@@ -463,19 +497,23 @@
       $('#messagecamel').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
     })
 
-    
     $('#caps').click(function (e) {
       e.preventDefault()
       $('#messagecaps').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
     })
+
     $('#lowercase').click(function (e) {
       e.preventDefault()
-      $('#messagelowercase').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+      $('#messagelowercase').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');  
     })
+
     $('#punctuation').click(function (e) {
       e.preventDefault()
       $('#messagepunctuation').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
     })
+
+    // Show Success Alert on Space buttons//
+
     $('#spacebefore').click(function (e) {
       e.preventDefault()
       $('#messagespacebefore').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
@@ -490,9 +528,41 @@
       e.preventDefault()
       $('#messageextraspace').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
     })
+
     $('#nospace').click(function (e) {
       e.preventDefault()
       $('#messagenospace').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
+    $('#punctuation').click(function (e) {
+      e.preventDefault()
+      $('#messagepunctuation').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+
+// Show SUCCESS ALERTS on PUNCTUATION buttons //    
+
+    $('#underscore').click(function (e) {
+      e.preventDefault()
+      $('#messageunderscore').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+
+    $('#dash').click(function (e) {
+      e.preventDefault()
+      $('#messagedash').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+
+    
+    $('#numbers').click(function (e) {
+      e.preventDefault()
+      $('#messagenumbers').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+    $('#characters').click(function (e) {
+      e.preventDefault()
+      $('#messagecharacters').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+    $('#mixed').click(function (e) {
+      e.preventDefault()
+      $('#messagemixed').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
     })
 
     // CK TEXT EDITOR (WYSIWYG)
