@@ -169,42 +169,66 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
-                  <button type="button" class="btn btn-md btn-primary btn-block" id="current">Exact Case</button>                  
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-lg btn-primary btn-block" id="current">Exact Case</button>                  
                 </div>
-                <div class="col-md-8 pt-2">
+                <div class="col-md-3 pt-2">
                   <span id="messagecurrent"></span>                 
+                </div>
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-lg btn-primary btn-block" id="spacebefore">Space Before</button> 
+                </div>
+                <div class="col-md-3 pt-2">
+                  <span id="messagespacebefore"></span>                 
                 </div>
                 </div>
                 <div class="row my-2">
-                  <div class="col-md-4">
-                    <button type="button" class="btn btn-md btn-danger btn-block" id="camel">Camel Case</button>                  
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-lg btn-danger btn-block" id="camel">Camel Case</button>                  
                   </div>
-                  <div class="col-md-8 pt-2">
+                  <div class="col-md-3  pt-2">
                     <span id="messagecamel"></span>                    
+                  </div>
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-lg btn-danger btn-block" id="spaceafter">Space After</button> 
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <span id="messagespaceafter"></span>                 
                   </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-4">
-                      <button type="button" class="btn btn-md btn-success btn-block" id="caps">All Caps</button>                  
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-lg btn-success btn-block" id="caps">All Caps</button>                  
                     </div>
-                    <div class="col-md-8 pt-2">
+                    <div class="col-md-3  pt-2">
                       <span id="messagecaps"></span>                 
+                    </div>
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-lg btn-success btn-block" id="extraspace">Extra Space</button> 
+                    </div>
+                    <div class="col-md-3 pt-2">
+                      <span id="messageextraspace"></span>                 
                     </div>
                     </div>
                     <div class="row my-2">
-                      <div class="col-md-4">
-                        <button type="button" class="btn btn-md btn-info btn-block" id="lowercase">Lowercase</button>                  
+                      <div class="col-md-3">
+                        <button type="button" class="btn btn-lg btn-info btn-block" id="lowercase">Lowercase</button>                  
                       </div>
-                      <div class="col-md-8 pt-2">
+                      <div class="col-md-3  pt-2">
                         <span id="messagelowercase"></span>                    
+                      </div>
+                      <div class="col-md-3">
+                        <button type="button" class="btn btn-lg btn-info btn-block" id="nospace">No Space</button> 
+                      </div>
+                      <div class="col-md-3 pt-2">
+                        <span id="messagenospace"></span>                 
                       </div>
                       </div>
                       <div class="row my-2">
-                        <div class="col-md-4">
-                          <button type="button" class="btn btn-md btn-warning btn-block" id="punctuation">Punctuation</button>                  
+                        <div class="col-md-3">
+                          <button type="button" class="btn btn-lg btn-warning btn-block" id="punctuation">Punctuation</button>                  
                         </div>
-                        <div class="col-md-8 pt-2">
+                        <div class="col-md-3  pt-2">
                           <span id="messagepunctuation"></span>                    
                         </div>
                       </div>
@@ -470,18 +494,46 @@
 
     $('#camel').click(function (e) {
       e.preventDefault()
-      $('#messagecamel').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+      $('#messagecamel').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
     })
 
-    
     $('#caps').click(function (e) {
       e.preventDefault()
       $('#messagecaps').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
     })
+
     $('#lowercase').click(function (e) {
       e.preventDefault()
-      $('#messagelowercase').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+      $('#messagelowercase').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');  
     })
+
+    $('#punctuation').click(function (e) {
+      e.preventDefault()
+      $('#messagepunctuation').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
+    // Show Success Alert on Space buttons//
+
+    $('#spacebefore').click(function (e) {
+      e.preventDefault()
+      $('#messagespacebefore').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
+    $('#spaceafter').click(function (e) {
+      e.preventDefault()
+      $('#messagespaceafter').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
+    $('#extraspace').click(function (e) {
+      e.preventDefault()
+      $('#messageextraspace').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
+    $('#nospace').click(function (e) {
+      e.preventDefault()
+      $('#messagenospace').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button>Verification Successful</span>');
+    })
+
     $('#punctuation').click(function (e) {
       e.preventDefault()
       $('#messagepunctuation').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
