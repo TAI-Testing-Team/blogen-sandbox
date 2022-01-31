@@ -75,7 +75,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2> <i class="fas fa-search"></i> Find Element</h2>
+          <h2> <i class="fas fa-project-diagram"></i> Dynamic</h2>
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@
   </section>
 
 
-  <!-- FIND ELEMENT TESTS -->
+  <!-- DYNAMIC TESTS -->
 
   <section id="find-elements-tests" class="pb-5 my-5">
     <div class="container">
@@ -99,67 +99,77 @@
         <div class="col">
           <div class="card">
             <div class="card-header">
-              <h4>FIND ELEMENT</h4>
+              <h4> DYNAMIC</h4>
               </div>
             <div class="card-body">
-              <form>
+          
                 <div class="form-group mb-5 p-3">
-                  <label for="exampleFormControlTextarea1">ELEMENT INFO</label>
+                  <label for="exampleFormControlTextarea1">TESTING INFO</label>
                   <div>
-                    <textarea class="form-control" id="eleminfo-area" placeholder="Each Element's Info will be listed here:" value="" rows="5" name="name"></textarea>
+                    <textarea class="form-control" id="eleminfo-area" placeholder="" value="" rows="5" name="name"></textarea>
                   </div>
                 </div>
-              </form>
-              <form>
-                <div class="row justify-content-around" for="smallelementscontainer">
-                  <button type="button" class="btn btn-primary btn-lg" id="btn-button">Button</button>
-                  <div class="custom-control custom-checkbox pt-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Checkbox</label>
-                  </div>
-                  <div class="custom-control custom-radio pt-3">
-                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio2">Radio</label>
-                  </div>
-                  <div class="mt-3">
-                    <h4><a id="link-text" href="">Link</a></h4>
-                  </div>
-                </div>
-              </div>
-              </form>
-              <div class="container py-3 my-3">
+              
+             
+                <!-- <div class="row justify-content-around" for="smallelementscontainer">
+                  <button type="button" class="btn btn-primary btn-lg" id="btn-element-exists">Element Exists</button>
+                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-find-labels">Find Labels</button>
+                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-perform">Perform Gesture</button>
+                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-perform-exists">Perform Gesture Exists</button>
+                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-text-exists">Text Exists</button> -->
+                <!-- </div> -->
                 
-                <div class="container pb-5">
-                  <label for="customRange1">Slider</label>
-                  <input type="range" class="custom-range" id="customRange1">
+                <div class="container my-5">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btn-change">Change</button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btn-next">Next</button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirm</button>
+                    </div>
+                  </div>
                 </div>
 
-              <!-- <div class="container">
-                <div class="row text-center">
-                  <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-change">Change</button>
-                  </div>
-                  <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-next">Next</button>
-                  </div>
-                  <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-confirm">Confirm</button>
-                  </div>
-                </div>
-              </div> -->
+
                 
-                <div class="container pt-5">
-                <div class="form-group col-md-12">
-                  <label for="exampleFormControlTextarea1">Input Field</label>
-                  <input type="text" class="form-control" value="" id="input-get" name="name" >
+                <div class="container my-2">
+                  <div class="col">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Toggle One</label>
+                      </div>                      
+                    <!-- </div> -->
+                      <br>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                          <label class="custom-control-label" for="customSwitch2">Toggle Two</label>
+                        </div>
+                      <!-- </div> -->
+                        <br>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                          <label class="custom-control-label" for="customSwitch3">Toggle Three</label>
+                        </div>
+                        </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  </div>
                 </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+
 
   <!-- FOOTER -->
 
@@ -194,15 +204,8 @@
 
     // Change Value Attribute as Text is Inputted
     
-    const inputfield = document.getElementById('input-get');
-    
-    inputfield.addEventListener('input', updateValue);
+  
 
-
-    function updateValue(e) {
-
-      inputfield.setAttribute('value', e.target.value)
-    }
 
 
     // Capture Value of ElementInfo TextArea on Input 
@@ -224,57 +227,6 @@
     }
 
 
-  // // One-Click changes the Button Text to SELECT and Color to YELLOW
-
-  // const dynamic_button = document.getElementById('btn-button') 
-  
-  // dynamic_button.addEventListener('click', changeButton);
-
-  // function changeButton() {
-  //   dynamic_button.innerHTML = 'Select'
-  //   dynamic_button.className = "btn btn-warning btn-lg"
-  // }
-
-  // // Double-Click Button - Changes the Button Text to EXISTS and Color to GREEN
-
-  // const same_dynamic_button = document.getElementById('btn-button') 
-  
-  // same_dynamic_button.addEventListener('dblclick', changeButtonBack);
-
-  // function changeButtonBack() {
-  //   same_dynamic_button.innerHTML = 'Exists'
-  //   same_dynamic_button.className = "btn btn-success btn-lg"
-  // }
-
-  // Click Hyperlink - Change the text of LINK to TEXT when clicked
-
-  // const link_text = document.getElementById('link-text');
-
-  // link_text.addEventListener('click', changeText);
-
-  // function changeText() {
-  //   link_text.innerHTML = 'Text'
-  // }
-
-    // Click Hyperlink - Change the text of LINK to IT EXISTS when clicked
-
-//   const hyper_link = document.getElementById('link-text');
-
-//   hyper_link.addEventListener('dblclick', changeTextItExists);
-
-//   function changeTextItExists() {
-//   hyper_link.innerHTML = 'It Exists'
-// }
-
-  // Cause a Chrome Alert after Click
-
-  // const radio_button = document.getElementById('customRadio2');
-
-  // radio_button.addEventListener('click', causeAlert);
-
-  // function causeAlert() {
-  //   window.alert("Please Dismiss this Alert!")
-  // }
 
 
   // BUTTON ROW
@@ -289,12 +241,21 @@
   }
 
   const confirm_button = document.getElementById('btn-confirm') 
-  
+
   confirm_button.addEventListener('click', changeToProceed);
 
-  function changeToProceed() {
-    confirm_button.innerHTML = 'Proceed'
-    confirm_button.className = "btn btn-warning btn-lg"
+function changeToProceed() {
+  confirm_button.innerHTML = 'Proceed'
+  confirm_button.className = "btn btn-warning btn-lg"
+}
+
+  //Doublie click for perform gesture if exists script
+  
+  confirm_button.addEventListener('dblclick', changeToPerform);
+
+  function changeToPerform() {
+    confirm_button.innerHTML = 'Perform'
+    confirm_button.className = "btn btn-danger btn-lg"
   }
 
 
@@ -319,7 +280,6 @@
     change_button.innerText = 'Accept'
     change_button.className = "btn btn-info btn-lg"
 }
-
 
 
 
