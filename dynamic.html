@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dynamic.css">
     <title>Scripting API Test Site</title>
   </head>
 
@@ -111,18 +111,11 @@
                 </div>
               
              
-                <!-- <div class="row justify-content-around" for="smallelementscontainer">
-                  <button type="button" class="btn btn-primary btn-lg" id="btn-element-exists">Element Exists</button>
-                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-find-labels">Find Labels</button>
-                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-perform">Perform Gesture</button>
-                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-perform-exists">Perform Gesture Exists</button>
-                  <button type="button" class="btn btn-primary btn-default btn-lg" id="btn-text-exists">Text Exists</button> -->
-                <!-- </div> -->
                 
                 <div class="container my-5">
                   <div class="row text-center">
                     <div class="col-4">
-                      <button type="button" class="btn btn-primary btn-lg" id="btn-change">Change</button>
+                      <button type="button" class="btn btn-primary btn-lg dynamic-button" id="btn-change">Change</button>
                     </div>
                     <div class="col-4">
                       <button type="button" class="btn btn-primary btn-lg" id="btn-next">Next</button>
@@ -134,27 +127,27 @@
                 </div>
 
 
-                
+                <!-- Toggle Switches not currently
                 <div class="container my-2">
                   <div class="col">
                       <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="customSwitch1">
                         <label class="custom-control-label" for="customSwitch1">Toggle One</label>
                       </div>                      
-                    <!-- </div> -->
+                 
                       <br>
                         <div class="custom-control custom-switch">
                           <input type="checkbox" class="custom-control-input" id="customSwitch2">
                           <label class="custom-control-label" for="customSwitch2">Toggle Two</label>
                         </div>
-                      <!-- </div> -->
+                      
                         <br>
                         <div class="custom-control custom-switch">
                           <input type="checkbox" class="custom-control-input" id="customSwitch3">
                           <label class="custom-control-label" for="customSwitch3">Toggle Three</label>
+                                    </div>
                         </div>
-                        </div>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -265,7 +258,7 @@ function changeToProceed() {
 
   function changeToAccept() {
     change_button.innerText = 'Accept'
-    change_button.className = "btn btn-info btn-lg"
+    change_button.className = "btn btn-secondary btn-lg"
   }
 
   const change_all = document.getElementById('btn-change')
