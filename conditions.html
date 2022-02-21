@@ -1,0 +1,289 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dynamic.css">
+    <title>Scripting API Test Site</title>
+  </head>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-2">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Home</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a href="gestures.html" class="nav-link">Basic Gestures</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="findelem.html" class="nav-link">Find Element</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="verify.html" class="nav-link">Verify</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="wait.html" class="nav-link">Wait</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="tapparam.html" class="nav-link">Tap Param</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="inputparam.html" class="nav-link">Input Param</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="dynamic.html" class="nav-link">Dynamic</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="conditions.html" class="nav-link">Conditions</a>
+          </li> 
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i> Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-user-times"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+
+  <header id="main-header" class="py-2 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2> <i class="fas fa-project-diagram"></i> Dynamic</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH -->
+
+  <section id="search" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DYNAMIC TESTS -->
+
+  <section id="find-elements-tests" class="pb-5 my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4> DYNAMIC</h4>
+              </div>
+            <div class="card-body">
+          
+                <div class="form-group mb-5 p-3">
+                  <label for="exampleFormControlTextarea1">TESTING INFO</label>
+                  <div>
+                    <textarea class="form-control" id="eleminfo-area" placeholder="" value="" rows="5" name="name"></textarea>
+                  </div>
+                </div>
+              
+             
+                
+                <div class="container my-5">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg dynamic-button" id="btn-change">Change</button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btn-next">Next</button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirm</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Toggle Switches not currently
+                <div class="container my-2">
+                  <div class="col">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Toggle One</label>
+                      </div>                      
+                 
+                      <br>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                          <label class="custom-control-label" for="customSwitch2">Toggle Two</label>
+                        </div>
+                      
+                        <br>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                          <label class="custom-control-label" for="customSwitch3">Toggle Three</label>
+                                    </div>
+                        </div>
+                              </div> -->
+                            </div>
+                          </div>
+                        </div>
+
+                  </div>
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- FOOTER -->
+
+  <!-- <footer id="main-footer" class="bg-dark text-white mt-5 p-5 sticky-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead text-center">
+            Copyright &copy; <span id="year"></span>
+            - API Sandbox
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+
+
+
+
+  <script>  
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // ELEMENT INFO TEXT AREA
+
+    // Change Value Attribute as Text is Inputted
+    
+  
+
+
+
+    // Capture Value of ElementInfo TextArea on Input 
+
+    const textarea = document.getElementById('eleminfo-area');
+
+    textarea.addEventListener('input', updateTAattr);
+
+    function updateTAattr (e) {
+      textarea.setAttribute('value', e.target.value)
+    }
+
+    // Delete Element Info in TextArea when No Longer Focused
+    
+    textarea.addEventListener('blur', deleteTAattr);
+
+    function deleteTAattr (e) {
+      textarea.setAttribute('value', e.target.value = '')
+    }
+
+
+
+
+  // BUTTON ROW
+
+  const next_button = document.getElementById('btn-next') 
+  
+  next_button.addEventListener('click', changeToSave);
+
+  function changeToSave() {
+    next_button.innerHTML = 'Save'
+    next_button.className = "btn btn-success btn-lg"
+  }
+
+  const confirm_button = document.getElementById('btn-confirm') 
+
+  confirm_button.addEventListener('click', changeToProceed);
+
+function changeToProceed() {
+  confirm_button.innerHTML = 'Proceed'
+  confirm_button.className = "btn btn-warning btn-lg"
+}
+
+  //Doublie click for perform gesture if exists script
+  
+  confirm_button.addEventListener('dblclick', changeToPerform);
+
+  function changeToPerform() {
+    confirm_button.innerHTML = 'Perform'
+    confirm_button.className = "btn btn-danger btn-lg"
+  }
+
+
+  const change_button = document.getElementById('btn-change') 
+  
+  change_button.addEventListener('click', changeToAccept);
+
+  function changeToAccept() {
+    change_button.innerText = 'Accept'
+    change_button.className = "btn btn-secondary btn-lg"
+  }
+
+  const change_all = document.getElementById('btn-change')
+
+  change_all.addEventListener('dblclick', changeAllButtons);
+
+  function changeAllButtons() {
+    next_button.innerHTML = 'Save'
+    next_button.className = "btn btn-success btn-lg"
+    confirm_button.innerHTML = 'Proceed'
+    confirm_button.className = "btn btn-warning btn-lg"
+    change_button.innerText = 'Accept'
+    change_button.className = "btn btn-info btn-lg"
+}
+
+
+
+
+
+  </script>
+</body>
+
+</html>
