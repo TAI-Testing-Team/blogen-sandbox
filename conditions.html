@@ -3,7 +3,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,7 @@
     <link rel="stylesheet" href="css/dynamic.css">
     <title>Scripting API Test Site</title>
   </head>
-
+  
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-2">
     <div class="container">
       <a href="index.html" class="navbar-brand">Home</a>
@@ -47,21 +46,7 @@
             <a href="conditions.html" class="nav-link">Conditions</a>
           </li> 
         </ul>
-
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item dropdown mr-3">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-              <i class="fas fa-user"></i> Profile
-            </a>
-            <div class="dropdown-menu">
-              <a href="profile.html" class="dropdown-item">
-                <i class="fas fa-user-circle"></i> Profile
-              </a>
-              <a href="settings.html" class="dropdown-item">
-                <i class="fas fa-cog"></i> Settings
-              </a>
-            </div>
-          </li> -->
           <li class="nav-item">
             <a href="login.html" class="nav-link">
               <i class="fas fa-user-times"></i> Logout
@@ -78,111 +63,74 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2> <i class="fas fa-project-diagram"></i> Dynamic</h2>
+          <h2> <i class="fas fa-code"></i> Preconditions / Postconditions</h2>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SEARCH -->
-
-  <section id="search" class="py-4 mb-4 bg-light">
-    <div class="container">
-      <div class="row">
-      </div>
-    </div>
-  </section>
-
-
-  <!-- DYNAMIC TESTS -->
-
-  <section id="find-elements-tests" class="pb-5 my-5">
+  <!-- CONDITIONS PAGE -->
+  <section id="conditions-tests" class="pb-5 my-5">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="card">
+
             <div class="card-header">
-              <h4> DYNAMIC</h4>
-              </div>
+              <h4> PRECONDITIONS / POSTCONDITIONS</h4>
+            </div>
+
             <div class="card-body">
-          
-                <div class="form-group mb-5 p-3">
-                  <label for="exampleFormControlTextarea1">TESTING INFO</label>
-                  <div>
-                    <textarea class="form-control" id="eleminfo-area" placeholder="" value="" rows="5" name="name"></textarea>
-                  </div>
-                </div>
-              
-             
-                
-                <div class="container my-5">
-                  <div class="row text-center">
-                    <div class="col-4">
-                      <button type="button" class="btn btn-primary btn-lg dynamic-button" id="btn-change">Change</button>
-                    </div>
-                    <div class="col-4">
-                      <button type="button" class="btn btn-primary btn-lg" id="btn-next">Next</button>
-                    </div>
-                    <div class="col-4">
-                      <button type="button" class="btn btn-primary btn-lg" id="btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirm</button>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Free Version</h5>
+                      <p class="card-text">100% Less Expensive, 50% More Intrusive</p>
+                      <a href="#" id="free_button" class="btn btn-primary">Ad-Supported</a>
                     </div>
                   </div>
                 </div>
-
-
-                <!-- Toggle Switches not currently
-                <div class="container my-2">
-                  <div class="col">
-                      <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                        <label class="custom-control-label" for="customSwitch1">Toggle One</label>
-                      </div>                      
-                 
-                      <br>
-                        <div class="custom-control custom-switch">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                          <label class="custom-control-label" for="customSwitch2">Toggle Two</label>
-                        </div>
-                      
-                        <br>
-                        <div class="custom-control custom-switch">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                          <label class="custom-control-label" for="customSwitch3">Toggle Three</label>
-                                    </div>
-                        </div>
-                              </div> -->
-                            </div>
-                          </div>
-                        </div>
-
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Premium Version</h5>
+                      <p class="card-text">Includes lifetime montioring and 24/7 digital surveillance </p>
+                      <a href="#" id="premium_button" class="btn btn-primary">$99.99</a>
+                    </div>
                   </div>
                 </div>
-
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  <!-- FOOTER -->
-
-  <!-- <footer id="main-footer" class="bg-dark text-white mt-5 p-5 sticky-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p class="lead text-center">
-            Copyright &copy; <span id="year"></span>
-            - API Sandbox
-          </p>
+  <div id="sign_up_modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Subscribe our Newsletter</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+				<p>Subscribe for 10% OFF!</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No Thanks</button>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </footer> -->
-
-
+</div>
 
 
 
@@ -194,7 +142,10 @@
 
 
 
-  <script>  
+  <script>
+
+
+
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
 
@@ -205,85 +156,30 @@
   
 
 
+    setInterval(function() {
+    $('#sign_up_modal').modal();
+    }, 2500);
 
-    // Capture Value of ElementInfo TextArea on Input 
-
-    const textarea = document.getElementById('eleminfo-area');
-
-    textarea.addEventListener('input', updateTAattr);
-
-    function updateTAattr (e) {
-      textarea.setAttribute('value', e.target.value)
-    }
-
-    // Delete Element Info in TextArea when No Longer Focused
-    
-    textarea.addEventListener('blur', deleteTAattr);
-
-    function deleteTAattr (e) {
-      textarea.setAttribute('value', e.target.value = '')
-    }
+// PRICE BUTTONS
 
 
+  // Free Button and Premium Buttons -> Added to Cart
 
-
-  // BUTTON ROW
-
-  const next_button = document.getElementById('btn-next') 
+  const free_button = document.getElementById('free_button');
+  const premium_button = document.getElementById('premium_button');
   
-  next_button.addEventListener('click', changeToSave);
+  free_button.addEventListener('click', changeToAdded);
+  premium_button.addEventListener('click', changePremToAdded);
 
-  function changeToSave() {
-    next_button.innerHTML = 'Save'
-    next_button.className = "btn btn-success btn-lg"
+  function changeToAdded() {
+    free_button.innerHTML = 'Added to Cart!'
+    free_button.className = "btn btn-success btn-md"
   }
 
-  const confirm_button = document.getElementById('btn-confirm') 
-
-  confirm_button.addEventListener('click', changeToProceed);
-
-function changeToProceed() {
-  confirm_button.innerHTML = 'Proceed'
-  confirm_button.className = "btn btn-warning btn-lg"
-}
-
-  //Doublie click for perform gesture if exists script
-  
-  confirm_button.addEventListener('dblclick', changeToPerform);
-
-  function changeToPerform() {
-    confirm_button.innerHTML = 'Perform'
-    confirm_button.className = "btn btn-danger btn-lg"
+  function changePremToAdded() {
+    premium_button.innerHTML = 'Added to Cart!'
+    premium_button.className = "btn btn-success btn-md"
   }
-
-
-  const change_button = document.getElementById('btn-change') 
-  
-  change_button.addEventListener('click', changeToAccept);
-
-  function changeToAccept() {
-    change_button.innerText = 'Accept'
-    change_button.className = "btn btn-secondary btn-lg"
-  }
-
-  const change_all = document.getElementById('btn-change')
-
-  change_all.addEventListener('dblclick', changeAllButtons);
-
-  function changeAllButtons() {
-    next_button.innerHTML = 'Save'
-    next_button.className = "btn btn-success btn-lg"
-    confirm_button.innerHTML = 'Proceed'
-    confirm_button.className = "btn btn-warning btn-lg"
-    change_button.innerText = 'Accept'
-    change_button.className = "btn btn-info btn-lg"
-}
-
-
-
-
 
   </script>
-</body>
-
 </html>
