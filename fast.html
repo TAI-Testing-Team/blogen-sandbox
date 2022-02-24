@@ -93,7 +93,7 @@
                   <button type="button" class="btn btn-warning btn-lg" id="btn-second">Second Button</button>
                 </div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-danger btn-lg" id="btn-third" data-bs-toggle="modal" data-bs-target="#exampleModal">Third Button</button>
+                  <button type="button" class="btn btn-danger btn-lg" id="btn-third">Third Button</button>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-2">              
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Small Modal</button>                  
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">Small Modal</button>                  
                 </div>
                 <div class="col-md-8 mt-1">
                   <div id="tmpmatch"></div>  
@@ -115,7 +115,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-2">              
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id ="disappear">Disappearing in 10 seconds</button>                  
+                  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exampleModal" id ="disappear">Disappearing in 10 seconds</button>                  
                 </div>
                 <div class="col-md-8 mt-1">
                   <div id="tmpmatch"></div>  
@@ -212,9 +212,33 @@
       else {
         heart.className = "fa fa-heart"
       }
-       
-     
     }
+
+  const first_button = document.getElementById('btn-first') 
+
+  first_button.addEventListener('click', changeToTap);
+
+  function changeToTap() {
+  first_button.innerHTML = 'Tapped'
+  first_button.className = "btn btn-success btn-lg"
+  }
+
+  const second_button = document.getElementById('btn-second') 
+
+second_button.addEventListener('click', changeToTap2);
+
+function changeToTap2() {
+second_button.innerHTML = 'Tapped'
+second_button.className = "btn btn-success btn-lg"
+}
+const third_button = document.getElementById('btn-third') 
+
+third_button.addEventListener('click', changeToTap3);
+
+function changeToTap3() {
+third_button.innerHTML = 'Tapped'
+third_button.className = "btn btn-success btn-lg"
+}
 
   </script>
 </html>
