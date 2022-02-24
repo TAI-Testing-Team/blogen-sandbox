@@ -115,7 +115,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-2">              
-                  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exampleModal" id ="disappear">Disappearing in 10 seconds</button>                  
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id ="disappear">Disappearing in 10 seconds</button>                  
                 </div>
                 <div class="col-md-8 mt-1">
                   <div id="tmpmatch"></div>  
@@ -141,8 +141,8 @@
                     This is a pop up.
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                  
                   </div>
                 </div>
               </div>
@@ -238,6 +238,15 @@ third_button.addEventListener('click', changeToTap3);
 function changeToTap3() {
 third_button.innerHTML = 'Tapped'
 third_button.className = "btn btn-success btn-lg"
+}
+
+const disappear = document.getElementById('disappear') 
+
+disappear.addEventListener('click', changeToTap4);
+
+function changeToTap4() {
+disappear.innerHTML = 'Tapped'
+disappear.className = "btn btn-success btn-lg"
 }
 
   </script>
