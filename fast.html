@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/dynamic.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
     <title>Scripting API Test Site</title>
   </head>
   
@@ -75,6 +77,8 @@
       <div class="row">
         <div class="col">
           <div class="card">
+
+            <!-- EXECUTE STEPS FAST SECTION -->
 
             <div class="card-header">
               <h4> EXECUTE STEPS FAST</h4>
@@ -143,6 +147,22 @@
                 </div>
               </div>
             </div>
+<!-- OFF SET SECTION -->
+            <div class="card-header">
+              <h4> OFFSET</h4>
+            </div>
+
+            <div class="container my-5">
+              <div class="row text-center">
+                <div class="col center">
+                  <button type="button" class="btn btn-primary btn-lg"><span  id="heart" class="bi bi-heart"></span> Offset Button</button>
+                </div>
+                <!-- <div class="col-4">
+                  <button type="button" class="btn btn-primary"><span  id="heart_open" class="fa fa-heart"></span> Yeah boi</button>
+                </div> -->
+  
+              </div>
+            </div>
 
           </div>
         </div>
@@ -181,7 +201,20 @@
 
     myFunction()
 
+// MAKE Heart change from empty to filled. 
 
+    const heart = document.getElementById("heart")
+    heart.addEventListener('click', changeToFill);
+    function changeToFill() {
+      if (heart.className === "fa fa-heart"){
+        heart.className = "bi bi-heart"
+      }
+      else {
+        heart.className = "fa fa-heart"
+      }
+       
+     
+    }
 
   </script>
 </html>
