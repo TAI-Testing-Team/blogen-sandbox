@@ -182,6 +182,9 @@
   <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
 <script>
+
+  //Messages of verification successfull
+  
     $('#disappear').click(function (e) {
       e.preventDefault()
       $('#messagefast').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
@@ -251,7 +254,7 @@ second_button.className = "btn btn-success btn-lg"
 }
 const third_button = document.getElementById('btn-third') 
 
-third_button.addEventListener('click', changeToTap3);
+third_button.addEventListener('dblclick', changeToTap3);
 
 function changeToTap3() {
 third_button.innerHTML = 'Tapped'
