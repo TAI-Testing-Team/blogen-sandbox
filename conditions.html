@@ -149,16 +149,19 @@
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
 
-    // ELEMENT INFO TEXT AREA
-
-    // Change Value Attribute as Text is Inputted
-    
-  
 
 
-    setInterval(function() {
+    // Run Modal on Reload and Run Modal on Interval
+    showModal()
+
+    function showModal() {
     $('#sign_up_modal').modal();
-    }, 2500);
+    }
+
+
+    // setInterval(function() {
+    // $('#sign_up_modal').modal();
+    // }, 10000);
 
 // PRICE BUTTONS
 
