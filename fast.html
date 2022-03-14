@@ -115,10 +115,14 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-2">              
-                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id ="disappear">Disappearing in 10 seconds</button>                  
-                </div>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id ="disappear">Disappearing in 20 seconds</button>
+                </div> 
+
                 <div class="col-md-8 mt-1">
-                  <div id="tmpmatch"></div>  
+                  <div id="tmpmatch"></div> 
+                  <div class="col-8 pt-2">
+                    <span id="messagefast"></span>                  
+                </div> 
                 </div>
               </div>
             </div>
@@ -157,6 +161,8 @@
                 <div class="col center">
                   <button type="button" class="btn btn-primary btn-lg"><span  id="heart" class="bi bi-heart"></span> Offset Button</button>
                 </div>
+                <div class="col-md-3 pt-2">
+                  <span id="messageheart"></span>   
                 <!-- <div class="col-4">
                   <button type="button" class="btn btn-primary"><span  id="heart_open" class="fa fa-heart"></span> Yeah boi</button>
                 </div> -->
@@ -175,7 +181,22 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
+<script>
 
+  //Messages of verification successfull
+  
+    $('#disappear').click(function (e) {
+      e.preventDefault()
+      $('#messagefast').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+
+    $('#heart').click(function (e) {
+      e.preventDefault()
+      $('#messageheart').html('<span class="alert alert-success"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="false"></button> Verification Successful</span>');
+    })
+
+
+</script>
 
 
   <script>
@@ -196,7 +217,7 @@
       setTimeout(function(){ //using setTimeout function
       document.getElementById('disappear').style.display ='none'; //displaying the button again after 3000ms or 3 seconds
     }
-    ,10000); 
+    ,20000); 
     }
 
     myFunction()
@@ -233,7 +254,7 @@ second_button.className = "btn btn-success btn-lg"
 }
 const third_button = document.getElementById('btn-third') 
 
-third_button.addEventListener('click', changeToTap3);
+third_button.addEventListener('dblclick', changeToTap3);
 
 function changeToTap3() {
 third_button.innerHTML = 'Tapped'
