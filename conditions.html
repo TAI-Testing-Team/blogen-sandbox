@@ -113,7 +113,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Subscribe our Newsletter</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>`
             </div>
             <div class="modal-body">
 				<p>Subscribe for 10% OFF!</p>
@@ -155,7 +155,7 @@
     showModal()
 
     function showModal() {
-    $('#sign_up_modal').modal();
+    $('#sign_up_modal').modal({backdrop: 'static', keyboard: false});
     }
 
 
