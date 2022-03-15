@@ -11,6 +11,20 @@
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Login Page</title>
+  <style>
+         
+    /* We are stopping user from
+    printing our webpage */
+    @media print {
+
+        html,
+        body {
+
+            /* Hide the whole page */
+            display: none;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -119,6 +133,14 @@
     $('#year').text(new Date().getFullYear());
 
   </script>
+  <script language="javascript">
+    var noPrint=true;
+    var noCopy=true;
+    var noScreenshot=true;
+    var autoBlur=false;
+    </script>
+    
+    <script type="text/javascript" src="https://pdfanticopy.com/noprint.js"></script>
 </body>
 
 </html>
